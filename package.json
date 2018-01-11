@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --open --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "server":"node server/index.js",
+    "server": "node server/index.js",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "element-ui": "^2.0.11",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -24,6 +25,7 @@
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-jest": "^21.0.2",
     "babel-loader": "^7.1.1",
+    "babel-plugin-component": "^1.0.0",
     "babel-plugin-dynamic-import-node": "^1.2.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
@@ -45,6 +47,8 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^21.2.0",
     "jest-serializer-vue": "^0.3.0",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
     "mysql": "^2.15.0",
     "nightwatch": "^0.9.12",
     "node-notifier": "^5.1.2",
