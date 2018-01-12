@@ -1,11 +1,12 @@
 <template>
   <div class="nav-chunk">
     <el-autocomplete
+      class="input-search"
       v-model="state4"
       :fetch-suggestions="querySearchAsync"
       placeholder="请输入内容"
+      suffix-icon="el-icon-search"
       @select="handleSelect">
-      >
     </el-autocomplete>
   </div>
 </template>
@@ -99,6 +100,10 @@
 
 <style scoped>
   .nav-chunk{
-    margin-top: 20px;
+    margin: 10px 0;
+  }
+  .input-search{
+    float: right;
+    margin-right: 30px;
   }
 </style>
