@@ -25,6 +25,14 @@
   import FormvalidatorChunk from './form/formvalidator-chunk'
   import FormselfvalidatorChunk from './form/formselfvalidator-chunk'
   import TablestandardChunk from './table/tablestandard-chunk'
+  import TablefluidChunk from './table/tablefluid-chunk'
+  import TablemoreheadChunk from './table/tablemorehead-chunk'
+  import TablecheckboxChunk from './table/tablecheckbox-chunk'
+  import TableexpandChunk from './table/tableexpand-chunk'
+  import TablemergeChunk from './table/tablemerge-chunk'
+  import BasisiconChunk from './basis/basisicon-chunk'
+  import BasisbuttonChunk from './basis/basisbutton-chunk'
+  import BasisradioChunk from './basis/basisradio-chunk'
 
   export default {
     name: 'hello',
@@ -34,7 +42,15 @@
       FormalignChunk,
       FormvalidatorChunk,
       FormselfvalidatorChunk,
-      TablestandardChunk
+      TablestandardChunk,
+      TablefluidChunk,
+      TablemoreheadChunk,
+      TablecheckboxChunk,
+      TableexpandChunk,
+      TablemergeChunk,
+      BasisiconChunk,
+      BasisbuttonChunk,
+      BasisradioChunk
     },
     data() {
       return {

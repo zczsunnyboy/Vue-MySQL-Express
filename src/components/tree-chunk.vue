@@ -13,6 +13,17 @@
              :collapse="isCollapse">
       <el-submenu index="1">
         <template slot="title">
+          <i class="el-icon-menu"></i>
+          <span>基础</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="BasisiconChunk">Icon图标</el-menu-item>
+          <el-menu-item index="BasisbuttonChunk">Button按钮</el-menu-item>
+          <el-menu-item index="BasisradioChunk">Radio单选框</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="2">
+        <template slot="title">
           <i class="el-icon-location"></i>
           <span>示例</span>
         </template>
@@ -25,20 +36,12 @@
         <el-submenu index="1-2">
           <span slot="title">表格</span>
           <el-menu-item index="TablestandardChunk">标准表格</el-menu-item>
-          <el-menu-item index="FormvalidatorChunk">表单验证</el-menu-item>
-          <el-menu-item index="FormselfvalidatorChunk">表单自定义验证</el-menu-item>
+          <el-menu-item index="TablefluidChunk">流体表格</el-menu-item>
+          <el-menu-item index="TablemoreheadChunk">多级表头</el-menu-item>
+          <el-menu-item index="TablecheckboxChunk">多选表格</el-menu-item>
+          <el-menu-item index="TableexpandChunk">展开表格</el-menu-item>
+          <el-menu-item index="TablemergeChunk">合并表格</el-menu-item>
         </el-submenu>
-      </el-submenu>
-      <el-submenu index="2">
-        <template slot="title">
-          <i class="el-icon-menu"></i>
-          <span>导航二</span>
-        </template>
-        <el-menu-item-group>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
-        </el-menu-item-group>
       </el-submenu>
       <el-submenu index="3">
         <template slot="title">
