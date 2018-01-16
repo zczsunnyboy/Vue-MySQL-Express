@@ -6,6 +6,7 @@
     </el-radio-group>
 
     <el-menu default-active="FormalignChunk"
+             unique-opened
              class="el-menu-vertical-demo"
              @open="handleOpen"
              @close="handleClose"
@@ -20,6 +21,8 @@
           <el-menu-item index="BasisiconChunk">Icon图标</el-menu-item>
           <el-menu-item index="BasisbuttonChunk">Button按钮</el-menu-item>
           <el-menu-item index="BasisradioChunk">Radio单选框</el-menu-item>
+          <el-menu-item index="BasischeckboxChunk">Checkbox多选框</el-menu-item>
+          <el-menu-item index="BasisinputChunk">Input输入框</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="2">

@@ -33,6 +33,8 @@
   import BasisiconChunk from './basis/basisicon-chunk'
   import BasisbuttonChunk from './basis/basisbutton-chunk'
   import BasisradioChunk from './basis/basisradio-chunk'
+  import BasischeckboxChunk from './basis/basischeckbox-chunk'
+  import BasisinputChunk from './basis/basisinput-chunk'
 
   export default {
     name: 'hello',
@@ -50,7 +52,9 @@
       TablemergeChunk,
       BasisiconChunk,
       BasisbuttonChunk,
-      BasisradioChunk
+      BasisradioChunk,
+      BasischeckboxChunk,
+      BasisinputChunk
     },
     data() {
       return {
