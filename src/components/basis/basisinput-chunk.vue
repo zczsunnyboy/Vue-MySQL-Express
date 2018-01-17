@@ -167,10 +167,22 @@
         </el-col>
       </el-row>
     </div>
+
+    <div class="boxChunk">
+      <p class="childChunk">从服务端匹配</p>
+      <el-autocomplete
+        v-model="state3"
+        :fetch-suggestions="querySearch"
+        placeholder="请输入内容"
+        @select="handleSelect">
+      </el-autocomplete>
+    </div>
   </div>
 </template>
 
 <script>
+  import Axios from 'axios'
+
   export default {
     name: "basisinput-chunk",
     data() {
@@ -197,8 +209,11 @@
           maxRows: 1000
         },
         restaurants: [],
+        Asyncrestaurants:[],
         state1: '',
-        state2: ''
+        state2: '',
+        state3:'',
+        timeout:null
       }
     },
     methods: {
@@ -221,6 +236,9 @@
         return (restaurant) => {
           return (restaurant.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
         };
+      },
+      handleSelect(item) {
+
       },
       loadAll() {
         return [
@@ -276,7 +294,15 @@
       }
     },
     mounted(){
-      this.restaurants=this.loadAll()
+      this.restaurants=this.loadAll();
+
+      Axios.get('../../static/rest.json')
+        .then((response)=>{
+          this.Asyncrestaurants=response.data;
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
     }
   }
 </script>

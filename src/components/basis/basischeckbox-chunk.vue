@@ -1,7 +1,7 @@
 <template>
   <div class="basischeckbox-chunk">
     <div class="boxChunk">
-      <p class="childChunk">基本checkbox</p>
+      <p class="childChunk">基础checkbox</p>
       <el-checkbox v-model="checked" @change="changeBtn">姓名</el-checkbox>
     </div>
 

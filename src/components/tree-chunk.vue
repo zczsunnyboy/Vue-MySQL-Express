@@ -5,7 +5,7 @@
       <el-radio-button :label="true">收起</el-radio-button>
     </el-radio-group>
 
-    <el-menu default-active="FormalignChunk"
+    <el-menu
              unique-opened
              class="el-menu-vertical-demo"
              @open="handleOpen"
@@ -23,6 +23,9 @@
           <el-menu-item index="BasisradioChunk">Radio单选框</el-menu-item>
           <el-menu-item index="BasischeckboxChunk">Checkbox多选框</el-menu-item>
           <el-menu-item index="BasisinputChunk">Input输入框</el-menu-item>
+          <el-menu-item index="BasisnumberChunk">计数器</el-menu-item>
+          <el-menu-item index="BasisselectChunk">Select选择器</el-menu-item>
+          <el-menu-item index="BasiscascaderChunk">Cascader级联选择器</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="2">
