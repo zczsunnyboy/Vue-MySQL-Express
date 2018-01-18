@@ -72,10 +72,24 @@
         </el-cascader>
       </el-col>
     </el-row>
+
+    <el-row class="boxChunk">
+      <el-col>
+        <p class="childChunk">可搜索</p>
+        <el-cascader
+          placeholder="试试搜索：指南"
+          :options="options"
+          filterable
+          change-on-select>
+        </el-cascader>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
+  import axios from 'axios'
+
   export default {
     name: "basiscascader-chunk",
     data() {
@@ -574,17 +588,19 @@
                 label: '组件交互文档'
               }]
           }],
-        options3: [{
-          label: '江苏',
-          cities: []
-        }, {
-          label: '浙江',
-          cities: []
-        }],
+        options3: [
+          {
+            label: '江苏',
+            cities: []
+          }, {
+            label: '浙江',
+            cities: []
+          }],
         props: {
           value: 'label',
           children: 'cities'
         },
+        getcity:[],
         selectedOptions: [],
         selectedOptions2: [],
         selectedOptions3: [],
@@ -596,19 +612,27 @@
         console.log(value);
       },
       handleItemChange(val) {
-        console.log('active item:', val);
-        setTimeout(_ => {
-          if (val.indexOf('江苏') > -1 && !this.options3[0].cities.length) {
-            this.options3[0].cities = [{
-              label: '南京'
-            }];
-          } else if (val.indexOf('浙江') > -1 && !this.options3[1].cities.length) {
-            this.options3[1].cities = [{
-              label: '杭州'
-            }];
-          }
-        }, 300);
+        let Getcity=this.getcity[val];
+
+        setTimeout(()=>{
+          this.options3.forEach((value)=>{
+            let _value=value.label;
+            if(_value===val[0]){
+              value.cities=Getcity;
+            }
+          });
+        },300)
       }
+    },
+    mounted(){
+      axios
+        .get('../../static/jiangsu.json')
+        .then((response)=>{
+          this.getcity=response.data;
+        })
+        .catch((error)=>{
+          console.log(error)
+        });
     }
   }
 </script>

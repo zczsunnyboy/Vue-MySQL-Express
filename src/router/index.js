@@ -18,6 +18,12 @@ import BasisinputChunk from '@/components/basis/basisinput-chunk'
 import BasisnumberChunk from '@/components/basis/basisnumber-chunk'
 import BasisselectChunk from '@/components/basis/basisselect-chunk'
 import BasiscascaderChunk from '@/components/basis/basiscascader-chunk'
+import BasisswitchChunk from '@/components/basis/basisswitch-chunk'
+import BasissliderChunk from '@/components/basis/basisslider-chunk'
+import BasistimeChunk from '@/components/basis/basistime-chunk'
+import BasisdateChunk from '@/components/basis/basisdate-chunk'
+import BasisdatetimeChunk from '@/components/basis/basisdatetime-chunk'
+import BasisupdataChunk from '@/components/basis/basisupdata-chunk'
 
 Vue.use(Router)
 
@@ -112,6 +118,36 @@ export default new Router({
           path:'/BasiscascaderChunk',
           name:'Cascader级联选择器',
           component:BasiscascaderChunk
+        },
+        {
+          path:'/BasisswitchChunk',
+          name:'Switch开关',
+          component:BasisswitchChunk
+        },
+        {
+          path:'/BasissliderChunk',
+          name:'Slider滑块',
+          component:BasissliderChunk
+        },
+        {
+          path:'/BasistimeChunk',
+          name:'时间选择器',
+          component:BasistimeChunk
+        },
+        {
+          path:'/BasisdateChunk',
+          name:'日期选择器',
+          component:BasisdateChunk
+        },
+        {
+          path:'/BasisdatetimeChunk',
+          name:'日期时间选择器',
+          component:BasisdatetimeChunk
+        },
+        {
+          path:'/BasisupdataChunk',
+          name:'Updata上传',
+          component:BasisupdataChunk
         },
       ]
     }

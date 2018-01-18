@@ -26,6 +26,12 @@
           <el-menu-item index="BasisnumberChunk">计数器</el-menu-item>
           <el-menu-item index="BasisselectChunk">Select选择器</el-menu-item>
           <el-menu-item index="BasiscascaderChunk">Cascader级联选择器</el-menu-item>
+          <el-menu-item index="BasisswitchChunk">Switch开关</el-menu-item>
+          <el-menu-item index="BasissliderChunk">Slider滑块</el-menu-item>
+          <el-menu-item index="BasistimeChunk">时间选择器</el-menu-item>
+          <el-menu-item index="BasisdateChunk">日期选择器</el-menu-item>
+          <el-menu-item index="BasisdatetimeChunk">日期时间选择器</el-menu-item>
+          <el-menu-item index="BasisupdataChunk">Updata上传</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="2">
