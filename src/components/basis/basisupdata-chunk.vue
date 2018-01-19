@@ -32,10 +32,59 @@
         </el-upload>
       </el-col>
     </el-row>
+
+    <el-row class="boxChunk">
+      <el-col>
+        <p class="childChunk">照片墙</p>
+        <el-upload
+          action="/posts/"
+          list-type="picture-card"
+          :on-preview="handlePictureCardPreview"
+          :on-remove="handleRemove">
+          <i class="el-icon-plus"></i>
+        </el-upload>
+        <el-dialog :visible.sync="dialogVisible" size="tiny">
+          <img width="100%" :src="dialogImageUrl" alt="">
+        </el-dialog>
+      </el-col>
+    </el-row>
+
+    <el-row class="boxChunk">
+      <el-col>
+        <p class="childChunk">照片缩略图</p>
+        <el-upload
+          class="upload-demo"
+          action="/posts/"
+          :on-preview="handlePreview"
+          :on-remove="handleRemove"
+          :file-list="fileList"
+          list-type="picture">
+          <el-button size="small" type="primary">点击上传</el-button>
+          <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+        </el-upload>
+      </el-col>
+    </el-row>
+
+    <el-row class="boxChunk">
+      <el-col>
+        <p class="childChunk">拖拽上传</p>
+        <el-upload
+          class="upload-demo"
+          drag
+          action="/posts/"
+          multiple>
+          <i class="el-icon-upload"></i>
+          <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+          <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+        </el-upload>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
+  import axios from 'axios'
+
   export default {
     name: "basisupdata-chunk",
     data() {
@@ -51,6 +100,8 @@
           }
         ],
         imageUrl:'',
+        dialogImageUrl: '',
+        dialogVisible: false
       }
     },
     methods:{
@@ -80,7 +131,18 @@
           this.$message.error('上传头像图片大小不能超过 2MB!');
         }
         return isJPG && isLt2M;
+      },
+      handlePictureCardPreview(file) {
+        this.dialogImageUrl = file.url;
+        this.dialogVisible = true;
       }
+    },
+    mounted(){
+      axios.get('/posts')
+      .then((response)=>{
+        console.log(response.data)
+      })
+      .catch(()=>{})
     }
   }
 </script>

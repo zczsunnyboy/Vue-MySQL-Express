@@ -11,6 +11,7 @@
              @open="handleOpen"
              @close="handleClose"
              @select="handleSelect"
+             style="height: 450px"
              :collapse="isCollapse">
       <el-submenu index="1">
         <template slot="title">
@@ -32,6 +33,10 @@
           <el-menu-item index="BasisdateChunk">日期选择器</el-menu-item>
           <el-menu-item index="BasisdatetimeChunk">日期时间选择器</el-menu-item>
           <el-menu-item index="BasisupdataChunk">Updata上传</el-menu-item>
+          <el-menu-item index="BasisrateChunk">评分</el-menu-item>
+          <el-menu-item index="BasiscolorChunk">颜色选择器</el-menu-item>
+          <el-menu-item index="BasistransferChunk">穿梭器</el-menu-item>
+          <el-menu-item index="BasistagChunk">标签</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="2">

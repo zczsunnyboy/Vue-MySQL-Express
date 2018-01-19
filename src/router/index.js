@@ -24,6 +24,10 @@ import BasistimeChunk from '@/components/basis/basistime-chunk'
 import BasisdateChunk from '@/components/basis/basisdate-chunk'
 import BasisdatetimeChunk from '@/components/basis/basisdatetime-chunk'
 import BasisupdataChunk from '@/components/basis/basisupdata-chunk'
+import BasisrateChunk from '@/components/basis/basisrate-chunk'
+import BasiscolorChunk from '@/components/basis/basiscolor-chunk'
+import BasistransferChunk from '@/components/basis/basistransfer-chunk'
+import BasistagChunk from '@/components/basis/basistag-chunk'
 
 Vue.use(Router)
 
@@ -148,6 +152,26 @@ export default new Router({
           path:'/BasisupdataChunk',
           name:'Updata上传',
           component:BasisupdataChunk
+        },
+        {
+          path:'/BasisrateChunk',
+          name:'评分',
+          component:BasisrateChunk
+        },
+        {
+          path:'/BasiscolorChunk',
+          name:'颜色选择器',
+          component:BasiscolorChunk
+        },
+        {
+          path:'/BasistransferChunk',
+          name:'穿梭器',
+          component:BasistransferChunk
+        },
+        {
+          path:'/BasistagChunk',
+          name:'标签',
+          component:BasistagChunk
         },
       ]
     }
