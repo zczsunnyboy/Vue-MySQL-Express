@@ -37,6 +37,8 @@
           <el-menu-item index="BasiscolorChunk">颜色选择器</el-menu-item>
           <el-menu-item index="BasistransferChunk">穿梭器</el-menu-item>
           <el-menu-item index="BasistagChunk">标签</el-menu-item>
+          <el-menu-item index="BasisprogressChunk">Progress进度条</el-menu-item>
+          <el-menu-item index="BasisbadgeChunk">Badge标记</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="2">
@@ -58,6 +60,13 @@
           <el-menu-item index="TablecheckboxChunk">多选表格</el-menu-item>
           <el-menu-item index="TableexpandChunk">展开表格</el-menu-item>
           <el-menu-item index="TablemergeChunk">合并表格</el-menu-item>
+        </el-submenu>
+        <el-submenu index="1-3">
+          <span slot="title">Tree</span>
+          <el-menu-item index="TreebasisChunk">Tree基础</el-menu-item>
+          <el-menu-item index="TreelazyChunk">Tree懒加载</el-menu-item>
+          <el-menu-item index="TreedisableChunk">Tree禁用</el-menu-item>
+
         </el-submenu>
       </el-submenu>
       <el-submenu index="3">

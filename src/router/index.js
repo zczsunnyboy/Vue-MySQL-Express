@@ -28,6 +28,12 @@ import BasisrateChunk from '@/components/basis/basisrate-chunk'
 import BasiscolorChunk from '@/components/basis/basiscolor-chunk'
 import BasistransferChunk from '@/components/basis/basistransfer-chunk'
 import BasistagChunk from '@/components/basis/basistag-chunk'
+import BasisprogressChunk from '@/components/basis/basisprogress-chunk'
+import BasisbadgeChunk from '@/components/basis/basisbadge-chunk'
+
+import TreebasisChunk from '@/components/tree/treebasis-chunk'
+import TreelazyChunk from '@/components/tree/treelazy-chunk'
+import TreedisableChunk from '@/components/tree/treedisable-chunk'
 
 Vue.use(Router)
 
@@ -173,7 +179,33 @@ export default new Router({
           name:'标签',
           component:BasistagChunk
         },
+        {
+          path:'/BasisprogressChunk',
+          name:'Progress进度条',
+          component:BasisprogressChunk
+        },
+        {
+          path:'/BasisbadgeChunk',
+          name:'Badge标记',
+          component:BasisbadgeChunk
+        },
+        {
+          path:'/TreebasisChunk',
+          name:'Tree基础',
+          component:TreebasisChunk
+        },
+        {
+          path:'/TreelazyChunk',
+          name:'Tree懒加载',
+          component:TreelazyChunk
+        },
+        {
+          path:'/TreedisableChunk',
+          name:'Tree禁用',
+          component:TreedisableChunk
+        },
       ]
     }
   ]
 })
+
