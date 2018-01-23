@@ -43,6 +43,7 @@
             <el-menu-item index="BasismessageChunk">Message提示框</el-menu-item>
             <el-menu-item index="BasismessageboxChunk">MessageBox弹框</el-menu-item>
             <el-menu-item index="BasisnotificationChunk">Notification通知</el-menu-item>
+            <el-menu-item index="BasisdialogChunk">Dialog对话框</el-menu-item>
           </el-submenu>
           <el-submenu index="1-4">
             <span slot="title">Other</span>
@@ -56,6 +57,7 @@
             <el-menu-item index="BasisbadgeChunk">Badge标记</el-menu-item>
             <el-menu-item index="BasisloadingChunk">Loading</el-menu-item>
             <el-menu-item index="BasisbreadChunk">面包屑导航</el-menu-item>
+            <el-menu-item index="BasisstepsChunk">步骤条</el-menu-item>
           </el-submenu>
         </el-menu-item-group>
       </el-submenu>
@@ -91,6 +93,7 @@
           <span slot="title">菜单</span>
           <el-menu-item index="MenunavChunk">menuNav</el-menu-item>
           <el-menu-item index="MenutabChunk">menuTab</el-menu-item>
+          <el-menu-item index="MenudropChunk">下拉菜单</el-menu-item>
         </el-submenu>
       </el-submenu>
       <el-submenu index="3">

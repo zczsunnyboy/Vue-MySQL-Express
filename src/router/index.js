@@ -36,6 +36,8 @@ import BasismessageChunk from '@/components/basis/basismessage-chunk'
 import BasismessageboxChunk from '@/components/basis/basismessagebox-chunk'
 import BasisnotificationChunk from '@/components/basis/basisnotification-chunk'
 import BasisbreadChunk from '@/components/basis/basisbread-chunk'
+import BasisstepsChunk from '@/components/basis/basissteps-chunk'
+import BasisdialogChunk from '@/components/basis/basisdialog-chunk'
 
 import TreebasisChunk from '@/components/tree/treebasis-chunk'
 import TreelazyChunk from '@/components/tree/treelazy-chunk'
@@ -44,6 +46,7 @@ import TreebymyselfChunk from '@/components/tree/treebymyself-chunk'
 import TreefilterChunk from '@/components/tree/treefilter-chunk'
 import MenunavChunk from '@/components/menu/menunav-chunk'
 import MenutabChunk from '@/components/menu/menutab-chunk'
+import MenudropChunk from '@/components/menu/menudrop-chunk'
 
 Vue.use(Router)
 
@@ -263,6 +266,21 @@ export default new Router({
           path:'/BasisbreadChunk',
           name:'面包屑导航',
           component:BasisbreadChunk
+        },
+        {
+          path:'/MenudropChunk',
+          name:'下拉菜单',
+          component:MenudropChunk
+        },
+        {
+          path:'/BasisstepsChunk',
+          name:'步骤条',
+          component:BasisstepsChunk
+        },
+        {
+          path:'/BasisdialogChunk',
+          name:'Dialog对话框',
+          component:BasisdialogChunk
         },
       ]
     }
