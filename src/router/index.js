@@ -30,10 +30,20 @@ import BasistransferChunk from '@/components/basis/basistransfer-chunk'
 import BasistagChunk from '@/components/basis/basistag-chunk'
 import BasisprogressChunk from '@/components/basis/basisprogress-chunk'
 import BasisbadgeChunk from '@/components/basis/basisbadge-chunk'
+import BasisalertChunk from '@/components/basis/basisalert-chunk'
+import BasisloadingChunk from '@/components/basis/basisloading-chunk'
+import BasismessageChunk from '@/components/basis/basismessage-chunk'
+import BasismessageboxChunk from '@/components/basis/basismessagebox-chunk'
+import BasisnotificationChunk from '@/components/basis/basisnotification-chunk'
+import BasisbreadChunk from '@/components/basis/basisbread-chunk'
 
 import TreebasisChunk from '@/components/tree/treebasis-chunk'
 import TreelazyChunk from '@/components/tree/treelazy-chunk'
 import TreedisableChunk from '@/components/tree/treedisable-chunk'
+import TreebymyselfChunk from '@/components/tree/treebymyself-chunk'
+import TreefilterChunk from '@/components/tree/treefilter-chunk'
+import MenunavChunk from '@/components/menu/menunav-chunk'
+import MenutabChunk from '@/components/menu/menutab-chunk'
 
 Vue.use(Router)
 
@@ -204,8 +214,57 @@ export default new Router({
           name:'Tree禁用',
           component:TreedisableChunk
         },
+        {
+          path:'/TreebymyselfChunk',
+          name:'Tree自定义',
+          component:TreebymyselfChunk
+        },
+        {
+          path:'/TreefilterChunk',
+          name:'Tree过滤节点',
+          component:TreefilterChunk
+        },
+        {
+          path:'/BasisalertChunk',
+          name:'Alert警告框',
+          component:BasisalertChunk
+        },
+        {
+          path:'/BasisloadingChunk',
+          name:'Loading',
+          component:BasisloadingChunk
+        },
+        {
+          path:'/BasismessageChunk',
+          name:'Message提示框',
+          component:BasismessageChunk
+        },
+        {
+          path:'/BasismessageboxChunk',
+          name:'MessageBox弹框',
+          component:BasismessageboxChunk
+        },
+        {
+          path:'/BasisnotificationChunk',
+          name:'Notification通知',
+          component:BasisnotificationChunk
+        },
+        {
+          path:'/MenunavChunk',
+          name:'menuNav',
+          component:MenunavChunk
+        },
+        {
+          path:'/MenutabChunk',
+          name:'menuTab',
+          component:MenutabChunk
+        },
+        {
+          path:'/BasisbreadChunk',
+          name:'面包屑导航',
+          component:BasisbreadChunk
+        },
       ]
     }
   ]
 })
-
