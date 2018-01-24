@@ -44,6 +44,8 @@
             <el-menu-item index="BasismessageboxChunk">MessageBox弹框</el-menu-item>
             <el-menu-item index="BasisnotificationChunk">Notification通知</el-menu-item>
             <el-menu-item index="BasisdialogChunk">Dialog对话框</el-menu-item>
+            <el-menu-item index="BasistooltipChunk">文字提示</el-menu-item>
+            <el-menu-item index="BasispopoverChunk">Popover弹出框</el-menu-item>
           </el-submenu>
           <el-submenu index="1-4">
             <span slot="title">Other</span>
@@ -58,6 +60,9 @@
             <el-menu-item index="BasisloadingChunk">Loading</el-menu-item>
             <el-menu-item index="BasisbreadChunk">面包屑导航</el-menu-item>
             <el-menu-item index="BasisstepsChunk">步骤条</el-menu-item>
+            <el-menu-item index="BasiscardChunk">Card卡片</el-menu-item>
+            <el-menu-item index="BasiscarousetChunk">Carouset走马灯</el-menu-item>
+            <el-menu-item index="BasiscollapseChunk">Collapse折叠面板</el-menu-item>
           </el-submenu>
         </el-menu-item-group>
       </el-submenu>

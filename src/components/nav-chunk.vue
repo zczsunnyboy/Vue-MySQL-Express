@@ -1,24 +1,34 @@
 <template>
-  <div class="nav-chunk">
-    <el-autocomplete
-      class="input-search"
-      v-model="state4"
-      :fetch-suggestions="querySearchAsync"
-      placeholder="请输入内容"
-      suffix-icon="el-icon-search"
-      @select="handleSelect">
-    </el-autocomplete>
+  <div>
+    <el-row  class="input-search">
+      <el-col :span="18" class="nav-chunk">
+        <el-autocomplete
+          v-model="state4"
+          :fetch-suggestions="querySearchAsync"
+          placeholder="请输入内容"
+          suffix-icon="el-icon-search"
+          @select="handleSelect">
+        </el-autocomplete>
+      </el-col>
+      <el-col :span="5">
+        <index></index>
+      </el-col>
+    </el-row>
+
   </div>
 </template>
 
 <script>
+  import index from '../components/ThemePicker/index'
+
   export default {
     name: "nav-chunk",
     data() {
       return {
         restaurants: [],
         state4: '',
-        timeout: null
+        timeout: null,
+        color:'',
       };
     },
     methods: {
@@ -94,15 +104,19 @@
     },
     mounted() {
       this.restaurants = this.loadAll();
+    },
+    components:{
+      index
     }
   }
 </script>
 
 <style scoped>
   .nav-chunk{
-    margin: 10px 0;
+    margin-right: 10px;
   }
   .input-search{
+    margin-top: 10px;
     float: right;
     margin-right: 30px;
   }

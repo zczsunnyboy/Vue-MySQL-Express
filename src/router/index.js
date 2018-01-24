@@ -38,7 +38,11 @@ import BasisnotificationChunk from '@/components/basis/basisnotification-chunk'
 import BasisbreadChunk from '@/components/basis/basisbread-chunk'
 import BasisstepsChunk from '@/components/basis/basissteps-chunk'
 import BasisdialogChunk from '@/components/basis/basisdialog-chunk'
-
+import BasistooltipChunk from '@/components/basis/basistooltip-chunk'
+import BasispopoverChunk from '@/components/basis/basispopover-chunk'
+import BasiscardChunk from '@/components/basis/basiscard-chunk'
+import BasiscarousetChunk from '@/components/basis/basiscarouset-chunk'
+import BasiscollapseChunk from '@/components/basis/basiscollapse-chunk'
 import TreebasisChunk from '@/components/tree/treebasis-chunk'
 import TreelazyChunk from '@/components/tree/treelazy-chunk'
 import TreedisableChunk from '@/components/tree/treedisable-chunk'
@@ -281,6 +285,31 @@ export default new Router({
           path:'/BasisdialogChunk',
           name:'Dialog对话框',
           component:BasisdialogChunk
+        },
+        {
+          path:'/BasistooltipChunk',
+          name:'文字提示',
+          component:BasistooltipChunk
+        },
+        {
+          path:'/BasispopoverChunk',
+          name:'Popover弹出框',
+          component:BasispopoverChunk
+        },
+        {
+          path:'/BasiscardChunk',
+          name:'Card卡片',
+          component:BasiscardChunk
+        },
+        {
+          path:'/BasiscarousetChunk',
+          name:'Carouset走马灯',
+          component:BasiscarousetChunk
+        },
+        {
+          path:'/BasiscollapseChunk',
+          name:'Collapse折叠面板',
+          component:BasiscollapseChunk
         },
       ]
     }
