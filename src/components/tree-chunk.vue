@@ -104,12 +104,10 @@
       <el-submenu index="3">
         <template slot="title">
           <i class="el-icon-setting"></i>
-          <span>导航三</span>
+          <span>高阶</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="3-1">选项1</el-menu-item>
-          <el-menu-item index="3-2">选项2</el-menu-item>
-          <el-menu-item index="3-3">选项3</el-menu-item>
+          <el-menu-item index="CreateChunk">动画</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>

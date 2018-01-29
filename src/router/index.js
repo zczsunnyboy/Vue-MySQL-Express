@@ -51,6 +51,8 @@ import TreefilterChunk from '@/components/tree/treefilter-chunk'
 import MenunavChunk from '@/components/menu/menunav-chunk'
 import MenutabChunk from '@/components/menu/menutab-chunk'
 import MenudropChunk from '@/components/menu/menudrop-chunk'
+import CreateChunk from '@/components/Animation/create-chunk'
+
 
 Vue.use(Router)
 
@@ -310,6 +312,11 @@ export default new Router({
           path:'/BasiscollapseChunk',
           name:'Collapse折叠面板',
           component:BasiscollapseChunk
+        },
+        {
+          path:'/CreateChunk',
+          name:'动画',
+          component:CreateChunk
         },
       ]
     }

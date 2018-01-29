@@ -13,7 +13,7 @@
 
         <transition name="fade" mode="out-in">
           <div>
-            <div class="route-font">{{$route.name}}</div>
+            <el-button type="text" class="route-font">{{$route.name}}</el-button>
             <router-view/>
           </div>
         </transition>
@@ -63,8 +63,6 @@
     float: right;
   }
   .route-font{
-    font-size: 30px;
     margin-bottom: 30px;
-    color: @iconcolor;
   }
 </style>
