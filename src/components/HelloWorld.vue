@@ -63,6 +63,6 @@
     float: right;
   }
   .route-font{
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
   }
 </style>

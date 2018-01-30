@@ -87,7 +87,6 @@
     padding: 30px;
     margin: 2px 0;
     border: 1px solid #ddd;
-    color: @iconcolor;
   }
 
 </style>
