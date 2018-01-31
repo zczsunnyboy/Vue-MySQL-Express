@@ -1,44 +1,9 @@
-import * as PIXI from 'pixi.js'
+const isProduction = process.env.NODE_ENV === 'production';
 
-let app;
-const createApp=(obj,father)=>{
-  app=new PIXI.Application(obj);
+const isProdUrl=(url)=>{
+  let isProdurl=isProduction?'./static':'../../static';
 
-  father.appendChild(app.view);
-};
-//层
-const createContainer=function ({obj,father}) {
-  this.container = new PIXI.Container(obj);
-  if(father){
-    father.addChild(this.container)
-  }else {
-    app.stage.addChild(this.container)
-  }
-  return this.container
-};
-//纹理
-const createTexture=function ({url,obj,father}) {
-  this.texture = PIXI.Texture.fromImage(url);
-  return this.texture
-};
-//精灵
-const createSprite=function ({obj,father}) {
-  this.Sprite=new PIXI.Sprite(obj);
-  father.addChild(this.Sprite);
-  return this.Sprite
-};
-//文字
-const createText=function ({text,style,father}) {
-  this.Text=new PIXI.Text(text,style);
-  father.addChild(this.Text);
-  return this.Text
+  return isProdurl+url
 };
 
-export {
-  app,
-  createApp,
-  createContainer,
-  createTexture,
-  createSprite,
-  createText,
-}
+module.exports= isProdUrl;

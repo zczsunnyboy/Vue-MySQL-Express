@@ -182,6 +182,7 @@
 
 <script>
   import Axios from 'axios'
+  import isProdUrl from '../../assets/js/createApi'
 
   export default {
     name: "basisinput-chunk",
@@ -296,7 +297,8 @@
     mounted(){
       this.restaurants=this.loadAll();
 
-      Axios.get('../../static/rest.json')
+      let restUrl=isProdUrl('/rest.json');
+      Axios.get(restUrl)
         .then((response)=>{
           this.Asyncrestaurants=response.data;
         })

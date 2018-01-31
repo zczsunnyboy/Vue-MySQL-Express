@@ -89,6 +89,7 @@
 
 <script>
   import axios from 'axios'
+  import isProdUrl from '../../assets/js/createApi'
 
   export default {
     name: "basiscascader-chunk",
@@ -625,8 +626,9 @@
       }
     },
     mounted(){
+      let jiangsuUrl=isProdUrl('/jiangsu.json');
       axios
-        .get('../../static/jiangsu.json')
+        .get(jiangsuUrl)
         .then((response)=>{
           this.getcity=response.data;
         })

@@ -144,6 +144,7 @@
 
 <script>
   import axios from 'axios'
+  import isProdUrl from '../../assets/js/createApi'
 
   export default {
     name: "basisselect-chunk",
@@ -192,8 +193,12 @@
       }
     },
     mounted(){
+      let urlfood=isProdUrl('/food.json');
+      let urlcitys=isProdUrl('/citys.json');
+      let urlletter=isProdUrl('/letter.json');
+
       axios
-        .get('../../static/food.json')
+        .get(urlfood)
         .then((response)=>{
           this.options=response.data
         })
@@ -202,7 +207,7 @@
         });
 
       axios
-        .get('../../static/citys.json')
+        .get(urlcitys)
         .then((response)=>{
           this.options2=response.data
         })
@@ -211,7 +216,7 @@
         });
 
       axios
-        .get('../../static/letter.json')
+        .get(urlletter)
         .then((response)=>{
           this.list=response.data.map(item => {
             return { value: item, label: item };
