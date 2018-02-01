@@ -5,8 +5,23 @@
 </template>
 
 <script>
-  import * as Pixi from 'pixi.js'
+  import * as PIXI from 'pixi.js'
   import isProdUrl from '../../assets/js/createApi'
+
+  //Aliases
+  let Application = PIXI.Application,
+    Container = PIXI.Container,
+    loader = PIXI.loader,
+    resources = PIXI.loader.resources,
+    Graphics = PIXI.Graphics,
+    TextureCache = PIXI.utils.TextureCache,
+    Sprite = PIXI.Sprite,
+    Text = PIXI.Text,
+    TextStyle = PIXI.TextStyle;
+  let _loader = new PIXI.loaders.Loader();
+  let _resources=_loader.resources;
+  //Texture collection
+  let url=isProdUrl('/monster/monster.json');
 
   export default {
     name: "create-chunk",
@@ -17,33 +32,19 @@
       //
       let myself=this.$el;
 
-      //Aliases
-      let Application = PIXI.Application,
-        Container = PIXI.Container,
-        loader = PIXI.loader,
-        resources = PIXI.loader.resources,
-        Graphics = PIXI.Graphics,
-        TextureCache = PIXI.utils.TextureCache,
-        Sprite = PIXI.Sprite,
-        Text = PIXI.Text,
-        TextStyle = PIXI.TextStyle;
-
-      //Texture collection
-      let url=isProdUrl('/monster/monster.json');
-
       //Create a Pixi Application
       let app = new Application({
           width: 512,
           height: 512,
           antialiasing: true,
           transparent: false,
-          resolution: 1
+          resolution: 1,
         });
 
       //Add the canvas that Pixi automatically created for you to the HTML document
       myself.appendChild(app.view);
 
-      loader
+      _loader
         .add(url)
         .load(setup);
 
@@ -51,14 +52,13 @@
         door, healthBar, message, gameScene, gameOverScene, enemies, id;
 
       function setup() {
-
         //Make the game scene and add it to the stage
         gameScene = new Container();
         app.stage.addChild(gameScene);
 
         //Make the sprites and add them to the `gameScene`
         //Create an alias for the texture atlas frame ids
-        id = resources[url].textures;
+        id = _resources[url].textures;
 
         //Dungeon
         dungeon = new Sprite(id["dungeon.png"]);
@@ -232,14 +232,11 @@
       }
 
       function gameLoop(delta){
-
         //Update the current game state:
         state(delta);
       }
 
       function play(delta) {
-
-
         //use the explorer's velocity to make it move
         explorer.x += explorer.vx;
         explorer.y += explorer.vy;
@@ -421,7 +418,7 @@
             key.isDown = true;
             key.isUp = false;
           }
-          event.preventDefault();
+          // event.preventDefault();
         };
 
         //The `upHandler`
@@ -431,7 +428,7 @@
             key.isDown = false;
             key.isUp = true;
           }
-          event.preventDefault();
+          // event.preventDefault();
         };
 
         //Attach event listeners
@@ -441,12 +438,14 @@
         window.addEventListener(
           "keyup", key.upHandler.bind(key), false
         );
-
         return key;
       }
     },
     beforeRouteLeave (to, from, next) {
-      console.log(PIXI.loader)
+      _loader.destroy();
+      next()
+    },
+    beforeRouteEnter (to, from, next) {
       next()
     }
   }
